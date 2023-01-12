@@ -1,0 +1,128 @@
+.header {
+    .header__container {
+        flex-direction: row;
+        padding: 50px 30px;
+    }
+
+    .header__top {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $black;
+
+        .header__container {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    .header__phone, .header__link {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+        display: flex;
+        transition: .3s;
+
+        &::before {
+            content: '';
+            background: url('./images/icons/phone.svg');
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    .header__link {
+        color: $green;
+        margin-right: 10px;
+        text-transform: uppercase;
+        transition: .3s;
+
+        &::before {
+            background: url('./images/icons/plus.svg');
+        }
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    .header__socials {
+        display: flex;
+
+        .item__link {
+            display: flex;
+            margin-right: 10px;
+            transition: .3s;
+
+            &::before {
+                content: '';
+                width: 30px;
+                height: 30px;
+            }
+
+            &--map {
+                &::before {
+                    background: url('./images/icons/map.svg');
+                }
+            }
+
+            &--whatsapp {
+                &::before {
+                    background: url('./images/icons/whatsapp.svg');
+                }
+            }
+
+            &--mail {
+                &::before {
+                    background: url('./images/icons/mail.svg');
+                }
+            }
+
+            &--telegram {
+                &::before {
+                    background: url('./images/icons/telegram.svg');
+                }
+            }
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+
+    .header__pay {
+        color: $red;
+        border: 1px solid $red;
+        border-radius: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: .3s;
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu__link {
+        font-size: 20px;
+        transition: .3s;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}

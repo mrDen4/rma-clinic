@@ -1,0 +1,36 @@
+.about {
+    margin-bottom: 100px;
+    
+    .about__content {
+        display: flex;
+    }
+    
+    .about__description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__text {
+        font-size: 19px;
+        font-weight: lighter;
+    }
+
+    .about__callback {
+        border-right: none;
+        border-radius: 0px 0px 0 70px;
+        width: 110%;
+    }
+
+    .callback__form {
+        width: 90%;
+    }
+
+    .about__container-img {
+        z-index: 2;
+
+        .about__img {
+            height: 100%;
+            border-radius: 0 70px;
+        }
+    }
+}
