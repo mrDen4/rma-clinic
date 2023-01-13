@@ -1,0 +1,117 @@
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    .footer__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 40px 0;
+    }
+
+    .footer__search {
+        position: relative;
+
+        .search__input {
+            background: #fff;
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+            display: flex;
+            padding: 10px 10px 10px 40px;
+            font-size: 16px;
+        }
+
+        .search__label {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+        }
+    }
+
+    .footer__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .list__item {
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .list__link {
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: .3s;
+
+            &::before {
+                content: '';
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: $red;
+            }
+
+            &--docs {
+                &::before {
+                    background: url('./images/icons/docs.svg') center center no-repeat;
+                }
+            }
+
+            &--news {
+                &::before {
+                    background: url('./images/icons/news.svg') center center no-repeat;
+                }
+            }
+
+            &--mail {
+                &::before {
+                    background: url('./images/icons/mail.svg') center center no-repeat;
+                }
+            }
+
+            &--phone {
+                &::before {
+                    background: url('./images/icons/phone.svg') center center no-repeat;
+                }
+            }
+
+            &--user {
+                &::before {
+                    background: url('./images/icons/user.svg') center center no-repeat;
+                }
+            }
+        }
+    }
+
+    .footer__menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .menu__link {
+            font-size: 16px;
+            font-weight: bold;
+            transition: .3s;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    .footer__text {
+        font-size: 15px;
+        text-align: center;
+        font-weight: lighter;
+    }
+}
