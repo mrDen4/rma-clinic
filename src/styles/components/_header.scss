@@ -2,6 +2,22 @@
     .header__container {
         flex-direction: row;
         padding: 50px 30px;
+
+        @include phones() {
+            flex-wrap: wrap;
+        }
+    }
+
+    .header__logo {
+        @include phones() {
+            width: 50%;
+            order: 1;
+            margin-bottom: 20px;
+        }
+
+        .logo__img {
+            width: 100%;
+        }
     }
 
     .header__top {
@@ -23,6 +39,13 @@
         display: flex;
         transition: .3s;
 
+        @include phones() {
+            width: 100%;
+            order: 3;
+            font-size: 14px;
+            align-items: center;
+        }
+
         &::before {
             content: '';
             background: url('./images/icons/phone.svg');
@@ -42,6 +65,12 @@
         text-transform: uppercase;
         transition: .3s;
 
+        @include phones() {
+            order: 2;
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
         &::before {
             background: url('./images/icons/plus.svg');
         }
@@ -53,6 +82,12 @@
 
     .header__socials {
         display: flex;
+
+        @include phones() {
+            order: 1;
+            width: 45%;
+            margin-bottom: 20px;
+        }
 
         .item__link {
             display: flex;
@@ -108,6 +143,14 @@
         &:hover {
             opacity: .5;
         }
+
+        @include phones() {
+            order: 2;
+            width: 45%;
+            font-size: 14px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+        }
     }
 
     .menu__list {
@@ -115,6 +158,10 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+
+        @include phones() {
+            flex-wrap: wrap;
+        }
     }
 
     .menu__link {
