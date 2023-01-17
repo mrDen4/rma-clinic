@@ -9,7 +9,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         padding: 40px 0;
 
-        @include phones() {
+        @include tablets() {
             flex-direction: column;
         }
     }
@@ -17,7 +17,7 @@
     .footer__search {
         position: relative;
 
-        @include phones() {
+        @include tablets() {
             margin-bottom: 20px;
         }
 
@@ -42,7 +42,7 @@
         justify-content: space-between;
         align-items: center;
 
-        @include phones() {
+        @include tablets() {
             flex-direction: column;
             align-items: flex-start;
         }
@@ -50,7 +50,7 @@
         .list__item {
             margin-right: 30px;
 
-            @include phones() {
+            @include tablets() {
                 margin-right: 0;
                 margin-bottom: 20px;
             }
@@ -116,13 +116,13 @@
         justify-content: space-between;
         width: 100%;
 
-        @include phones() {
+        @include tablets() {
             flex-direction: column;
             align-items: center;
         }
 
         .menu__item {
-            @include phones() {
+            @include tablets() {
                 margin-bottom: 20px;
             }
         }

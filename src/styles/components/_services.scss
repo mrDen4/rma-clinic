@@ -4,9 +4,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 30px;
 
-        @include phones() {
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include tablets() {
             flex-direction: column;
+            margin-bottom: 0;
         }
     }
 
@@ -18,7 +24,7 @@
         width: 23%;
         padding: 25px 5px;
 
-        @include phones() {
+        @include tablets() {
             width: 100%;
             padding: 0;
             background: none;
@@ -33,6 +39,11 @@
         margin-bottom: 20px;
         background: #fff;
         padding: 15px;
+        transition: .3s;
+
+        &:hover {
+            background: $green;
+        }
 
         .block__icon {
             width: 30px;

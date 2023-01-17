@@ -1,14 +1,14 @@
 .about {
     margin-bottom: 100px;
 
-    @include phones() {
+    @include tablets() {
         margin-bottom: 50px;
     }
     
     .about__content {
         display: flex;
 
-        @include phones() {
+        @include tablets() {
             flex-direction: column;
         }
     }
@@ -20,7 +20,7 @@
 
     .about__text {
         font-size: 19px;
-        font-weight: lighter;
+        padding-right: 20px;
     }
 
     .about__callback {
@@ -28,7 +28,7 @@
         border-radius: 0px 0px 0 70px;
         width: 110%;
 
-        @include phones() {
+        @include tablets() {
             border: 3px solid $green;
             width: 100%;
         }
@@ -41,18 +41,13 @@
     .about__container-img {
         z-index: 2;
 
-        @include phones() {
-            order: -1;
+        @include tablets() {
+            display: none;
         }
 
         .about__img {
             height: 100%;
             border-radius: 0 70px;
-
-            @include phones() {
-                height: initial;
-                width: 100%;
-            }
         }
     }
 }
