@@ -83,6 +83,7 @@ a {
         @include phones() {
             margin-bottom: 20px;
             font-size: 24px;
+            text-align: center;
         }
     }
 
@@ -144,6 +145,7 @@ a {
         @include phones() {
             position: initial;
             padding: 9px 50px;
+            border-radius: 0 30px;
         }
     }
 }

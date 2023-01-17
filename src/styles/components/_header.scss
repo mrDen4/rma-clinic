@@ -32,7 +32,8 @@
         }
     }
 
-    .header__phone, .header__link {
+    .header__phone,
+    .header__link {
         font-size: 18px;
         font-weight: bold;
         text-decoration: underline;
@@ -40,7 +41,7 @@
         transition: .3s;
 
         @include phones() {
-            width: 100%;
+            width: 45%;
             order: 3;
             font-size: 14px;
             align-items: center;
@@ -84,9 +85,8 @@
         display: flex;
 
         @include phones() {
-            order: 1;
+            order: 3;
             width: 45%;
-            margin-bottom: 20px;
         }
 
         .item__link {
@@ -150,6 +150,16 @@
             font-size: 14px;
             padding: 5px 10px;
             margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    .header__menu {
+
+        .header__container {
+            @include phones() {
+                padding: 0;
+            }
         }
     }
 
@@ -158,10 +168,26 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        transition: .3s;
 
         @include phones() {
             flex-wrap: wrap;
+            height: 0;
+            opacity: 0;
         }
+
+        &--active {
+            @include phones() {
+                height: initial;
+                opacity: 1;
+                padding: 50px 30px;
+            }
+        }
+    }
+
+    .menu__item {
+        width: 45%;
+        margin-bottom: 20px;
     }
 
     .menu__link {
@@ -170,6 +196,41 @@
 
         &:hover {
             color: $red;
+        }
+    }
+
+    .header__burger {
+        background: none;
+        display: none;
+        border: none;
+        order: 1;
+
+        @include phones() {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        svg.burger__close {
+            opacity: 0;
+            height: 0;
+            width: 0;
+
+            &--active {
+                opacity: 1;
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        svg.burger__open {
+            height: 30px;
+            width: 30px;
+
+            &--active {
+                opacity: 0;
+                height: 0;
+                width: 0;
+            }
         }
     }
 }
